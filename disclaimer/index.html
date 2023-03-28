@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer</title>
+    <link rel="icon" type = "image/png" href="./favicon.png">
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap);
+        @font-face{
+            font-family: 'Pricedown Rus';
+            font-style: normal;
+            font-weight: 400;
+            src: url(./ofont.ru_Pricedown.ttf);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .nav-icon {
+            display: none;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        html.active,body.active{
+            overflow: hidden;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            background-image: url(./about-us.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1350px;
+            width: 100%;
+        }
+        .top-menu {
+            display: none;
+        }
+        h1 {
+            font-family: 'Pricedown Rus';
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 91px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 0px #000000;
+        }
+        p {
+            font-family: 'IBM Plex Mono';
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+        }
+        p b {
+            font-family: 'IBM Plex Mono';
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 43px 0;
+        }
+        nav a span {
+            font-family: 'Pricedown Rus';
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 38px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+        .margin-right {
+            margin: 0 50px 0 0;
+        }
+        @media only screen and (max-width: 1390px) {
+            .container {
+                max-width: 992px;
+            }
+        }
+        @media only screen and (max-width: 992px) {
+            .container {
+                max-width: 700px;
+            }
+        }
+        @media only screen and (max-width: 750px) {
+            .container {
+                max-width: 550px;
+            }
+        }
+        @media only screen and (max-width: 570px) {
+            .container {
+                max-width: 480px;
+            }
+            .pc {
+                display: none;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-image: url(./about-us.png);
+                z-index: 2;
+            }
+            .pc.active {
+                display: flex;
+            }
+            .pc a span {
+                font-family: 'Pricedown Rus';
+                font-size: 72px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 68px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #EF8CD9;
+            }
+            .margin-right {
+                display: inline-block;
+                margin: 41px 0;
+            }
+            .nav-icon {
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+                z-index: 3;
+            }
+            .top-menu {
+                display: inline-block;
+            }
+            .logo-link {
+                position: relative;
+                z-index: 3;
+            }
+            .bar1, .bar2, .bar3 {
+                width: 24px;
+                height: 2px;
+                background-color: #fff;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            .active .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+                transform: rotate(-45deg) translate(-6px, 5px);
+            }
+
+            .active .bar2 {
+                opacity: 0;
+            }
+
+            .active .bar3 {
+                -webkit-transform: rotate(45deg) translate(-6px, -6px);
+                transform: rotate(45deg) translate(-6px, -6px);
+            }
+        }
+        @media only screen and (max-width: 490px) {
+        .container {
+                max-width: 320px;
+        }
+        h1 {
+            font-size: 70px;
+        }
+        p {
+            font-size: 18px;
+        }
+        p b {
+            font-size: 18px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <section class = "wrapper">
+        <div class = "container">
+            <div class = "header">
+                <a class = "logo-link" href="/"><img class = "logo-img" src = "./logo.png"/></a>
+                <nav class = "pc">
+                    <a href="/"><span class = "top-menu">Головна</span></a>
+                    <a href="/#about"><span class = "margin-right">Про нас</span></a>
+                    <a href="/#contact"><span>Контакти</span></a>
+                </nav>
+                <div class = "nav-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <h1>Дисклеймер</h1>
+            <p>
+                На цьому сайтi є вживання ненормативної лексики.
+                <br><br>
+                Контент на сайтi не має на метi когось образити чи принизити та несе виключно розважальний характер.
+                <br><br>
+                Зображення на сайтi є власнiстю їхнiх авторiв i не використовуються у комерцiйних цiлях.
+                <br><br>
+                <b>Автор:</b> Rockstar North Ltd.
+                <br>
+                <b>Видавцi:</b> Rockstar Games, Inc., Фiрма «1С»
+                <br><br>
+                Будь-якi зображення розмiщенi на сайтi <b>www.cta.is</b> можуть бути видаленi на запит автора.
+            </p>
+        </div>
+    </section>
+    <script>
+        const navIcon = document.querySelector(".nav-icon"),
+              navMenu = document.querySelector('.pc'),
+              html = document.querySelector('html'),
+              body = document.querySelector('body');
+
+        navIcon.addEventListener('click', () => {
+            navIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            html.classList.toggle('active');
+            body.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

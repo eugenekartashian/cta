@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полiтика Конфiденцiйностi</title>
+    <link rel="icon" type = "image/png" href="./favicon.png">
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap);
+        @font-face{
+            font-family: 'Pricedown Rus';
+            font-style: normal;
+            font-weight: 400;
+            src: url(./ofont.ru_Pricedown.ttf);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        html.active,body.active{
+            overflow: hidden;
+        }
+        .nav-icon {
+            display: none;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            background-image: url(./about-us.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1350px;
+            width: 100%;
+        }
+        .top-menu {
+            display: none;
+        }
+        h1 {
+            font-family: 'Pricedown Rus';
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 91px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 0px #000000;
+        }
+        .page-content {
+            font-family: 'IBM Plex Mono';
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+            padding: 0 0 20px 0;
+        }
+        .page-content b {
+            font-family: 'IBM Plex Mono';
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+        }
+        .page-content > ul > li {
+            font-family: 'IBM Plex Mono';
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 43px 0;
+        }
+        nav a span {
+            font-family: 'Pricedown Rus';
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 38px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+        .margin-right {
+            margin: 0 50px 0 0;
+        }
+        @media only screen and (max-width: 1390px) {
+            .container {
+                max-width: 992px;
+            }
+        }
+        @media only screen and (max-width: 992px) {
+            .container {
+                max-width: 700px;
+            }
+            h1 {
+                font-size: 73px;
+            }
+        }
+        @media only screen and (max-width: 750px) {
+            .container {
+                max-width: 550px;
+            }
+            h1 {
+                font-size: 63px;
+            }
+        }
+        @media only screen and (max-width: 570px) {
+            .container {
+                max-width: 480px;
+            }
+            .pc {
+                display: none;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-image: url(./about-us.png);
+                z-index: 2;
+            }
+            .pc.active {
+                display: flex;
+            }
+            .pc a span {
+                font-family: 'Pricedown Rus';
+                font-size: 72px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 68px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #EF8CD9;
+            }
+            .margin-right {
+                display: inline-block;
+                margin: 41px 0;
+            }
+            .nav-icon {
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+                z-index: 3;
+            }
+            .top-menu {
+                display: inline-block;
+            }
+            .logo-link {
+                position: relative;
+                z-index: 3;
+            }
+            .bar1, .bar2, .bar3 {
+                width: 24px;
+                height: 2px;
+                background-color: #fff;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            .active .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+                transform: rotate(-45deg) translate(-6px, 5px);
+            }
+
+            .active .bar2 {
+                opacity: 0;
+            }
+
+            .active .bar3 {
+                -webkit-transform: rotate(45deg) translate(-6px, -6px);
+                transform: rotate(45deg) translate(-6px, -6px);
+            }
+            h1 {
+                font-size: 53px;
+            }
+        }
+        @media only screen and (max-width: 490px) {
+        .container {
+            max-width: 320px;
+            padding: 0 8px;
+        }
+        h1 {
+            font-size: 37px;
+            line-height: 44px;
+        }
+        .page-content {
+            font-size: 18px;
+            line-height: 29px;
+        }
+        .page-content b {
+            font-size: 20px;
+        }
+        .page-content > ul > li {
+            font-size: 18px;
+            line-height: 29px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <section class = "wrapper">
+        <div class = "container">
+            <div class = "header">
+                <a class = "logo-link" href="/"><img class = "logo-img" src = "./logo.png"/></a>
+                <nav class = "pc">
+                    <a href="/"><span class = "top-menu">Головна</span></a>
+                    <a href="/#about"><span class = "margin-right">Про нас</span></a>
+                    <a href="/#contact"><span>Контакти</span></a>
+                </nav>
+                <div class = "nav-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <h1>Полiтика Конфiденцiйностi</h1>
+            <div class = "page-content">
+                <b>Дата оновлення: 23.11.2021</b>
+                <br/><br/>
+                Ми з вiдповiдальнiстю ставимося до надання всiм вiдвiдувачам нашого веб-сайту права на конфiденцiйнiсть персональних даних i докладаємо всiх зусиль для їх захисту. Цей документ пояснює основнi принципи збору, обробки, зберiгання та використання особистої iнформацiї клiєнта.
+                <br/><br/>
+                Вiдвiдуючи цей веб-сайт та / або, використовуючи нашi послуги, ви пiдтверджуєте свою згоду з умовами цiєї полiтики та зобов’язуєтеся дотримуватися всiх її принципiв.
+                <br/><br/>
+                <b>Якi данi ми збираємо</b>
+                <br/><br/>
+                Ми здiйснюємо збiр лише тiєї iнформацiї, яку ви добровiльно розкриваєте нам безпосередньо по телефону, при реєстрацiї на сайтi або по електроннiй поштi. Наш веб-сайт також автоматично збирає данi користувача (файли cookie).
+                <br/><br/>
+                Ми можемо отримувати вiд вас таку особисту iнформацiю:
+                <br/><br/>
+                <ul>
+                    <li>Данi, що мають iдентифiкацiйний характер, включаючи iм'я, прiзвище, дату народження, стать, нацiональнiсть, сiмейний стан.</li>
+                    <li>Ваш номер телефону, адреса електронної пошти.</li>
+                    <li>Данi профiлю, включаючи iм'я користувача та логiн.</li>
+                    <li>Особистi вподобання клiєнта щодо послуг, якi ми надаємо.</li>
+                    <li>Данi про транзакцiї по оплатi за нашi послуги.</li>
+                    <li>Час i тривалiсть вiдвiдування вами веб-сайту, данi про версiю браузера, що застосовувалась, мiсцезнаходження, часовий пояс та iнша iнформацiя технiчного характеру, що збирається автоматично. </li>
+                </ul>
+                <br/>
+                <b>Як ми використовуємо зiбрану iнформацiю</b>
+                <br/><br/>
+                Ми використовуємо всю зiбрану iнформацiю виключно в комерцiйних цiлях i у випадках, дозволених чинним законодавством, а саме:
+                <br/><br/>
+                <ul>
+                    <li>Для надання клiєнту послуг, на якi надiйшов запит, та виконання умов ранiше укладеного договору.</li>
+                    <li>Аби вiдповiдати на вашi запити.</li>
+                    <li>Для пiдтримки комунiкацiї з користувачем за допомогою наданої контактної iнформацiї.</li>
+                    <li>У процесi монiторингу ринку i сервiсiв для подальшого пiдвищення рiвня послуг, що надаються.</li>
+                </ul>
+                <br/>
+                В рамках цiєї Полiтики конфiденцiйностi ми зобов'язуємося не використовувати отриману iнформацiю у випадках, заборонених законом, не продавати i не передавати її.
+                <br/><br/>
+                <b>Хто може отримати доступ до ваших персональних даних</b>
+                <br/><br/>
+                Уповноваженi спiвробiтники нашої компанiї можуть отримати повний доступ до ваших даних для надання наших послуг i листування.
+                <br/><br/>
+                Ми також залишаємо за собою право використовувати цю iнформацiю спiльно зi стороннiми компанiями-партнерами, якi так чи iнакше беруть участь в наданнi вам послуг. Третiм особам забороняється поширювати, продавати, розголошувати, копiювати та використовувати її в незаконних цiлях, а також з метою, що виходить за рамки Договору про надання послуг.
+                <br/><br/>
+                Доступ до персональних даних клiєнта також можуть отримати правоохороннi й державнi органи у випадках, що передбаченi чинним законодавством.
+                <br/><br/>
+                <b>КЯк довго ми зберiгаємо вашу особисту iнформацiю</b>
+                <br/><br/>
+                Як правило, ми зберiгаємо всi зiбранi данi про користувача стiльки, скiльки необхiдно нам для повного виконання умов договору про надання послуг. Користувач може в будь-який момент подати запит на звiт про iнформацiю, що зберiгається компанiєю.
+                <br/><br/>
+                У разi виникнення скарг та ймовiрностi судових розглядiв компанiя залишає за собою право зберiгати зiбранi данi протягом певного перiоду часу навiть пiсля того, як ви припините користуватися нашими послугами i цим сайтом.
+                <br/><br/>
+                Ви можете вiдмовитися вiд надання особистої iнформацiї, а також заборонити сайту використовувати файли cookie, але це призведе до обмеження доступу до функцiй даного веб-сайту, а також до послуг компанiї.
+                <br/><br/>
+                <b>Як ми захищаємо вашi персональнi данi</b>
+                <br/><br/>
+                Компанiя прагне забезпечити збереження i безпеку особистої iнформацiї кожного користувача на регулярнiй основi. Ми використовуємо сучаснi методи та системи для захисту даних вiд крадiжки, випадкової втрати, змiни, копiювання та несанкцiонованого використання.
+                <br/><br/>
+                Користувач несе повну вiдповiдальнiсть за збереження i надiйнiсть обраних ним паролiв. Пам'ятайте, що навiть найсучаснiшi й найкращi методи захисту не є стовiдсотковою гарантiєю безпеки у разi хакерських атак i спроб отримати доступ стороннiми особами.
+                <br/><br/>
+                <b>Безпека даних неповнолiтнiх</b>
+                <br/><br/>
+                Ми не надаємо послуги особам, якi не досягли 16-рiчного вiку. Компанiя також не збирає особисту iнформацiю цих користувачiв. У тому випадку, якщо ми виявимо, що особи, якi не досягли цього вiку, намагаються отримати доступ до наших послуг i сайту, ми зобов'язуємося негайно припинити збiр даних i вiдмовити в наданнi послуг.
+                <br/><br/>
+                <b>Файли cookie</b>
+                <br/><br/>
+                З метою пiдвищення якостi послуг, що надаються, ми використовуємо файли cookie на нашому веб-сайтi. Цi файли використовуються для запису даних про вiдвiдування сайту i його роздiлiв, а також про частоту вiдвiдувань. Користувач може вiдключити файли cookie в налаштуваннях браузера. Варто враховувати, що це обмежить доступ до сайту компанiї.
+                <br/><br/>
+                <b>Внесення змiн до цiєї Полiтики конфiденцiйностi</b>
+                <br/><br/>
+                Ми залишаємо за собою право вносити змiни в поточну Полiтику конфiденцiйностi. Всi оновлення будуть опублiкованi на цiй сторiнцi. Користувач сайту несе повну вiдповiдальнiсть за ознайомлення зi змiнами, що були внесенi, а також зобов'язується iнформувати нас про змiни персональних даних в перiод нашої спiвпрацi.
+            </div>
+        </div>
+    </section>
+    <script>
+        const navIcon = document.querySelector(".nav-icon"),
+              navMenu = document.querySelector('.pc'),
+              html = document.querySelector('html'),
+              body = document.querySelector('body');
+
+        navIcon.addEventListener('click', () => {
+            navIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            html.classList.toggle('active');
+            body.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

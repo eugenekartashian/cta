@@ -1,0 +1,12 @@
+@font-face{
+  font-family: 'Pricedown Rus';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ofont.ru_Pricedown.ttf);
+}
+@font-face{
+  font-family: 'Rage Italic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/rage.ttf);
+}
